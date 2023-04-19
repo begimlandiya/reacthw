@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header'
+import Footer from './components/Footer';
+import Sections from './components/Sections';
 
-function App() {
+
+
+const App = () => {
+  const users = [
+    {name:"Чонгук",
+    lastName: "Чон",
+    age: 25,
+    id: Math. random() 
+    },
+    {name:"Техён",
+    lastName: "Ким",
+    age: 26,
+    id:Math. random() 
+    },
+    {name:"Чимин",
+    lastName: "Пак",
+    age: 26,
+    id:Math. random() 
+    },
+    {name:"Юнги",
+    lastName: "Мин",
+    age: 30,
+    id:Math. random() 
+    },
+    {name:"Хосок",
+    lastName: "Чон",
+    age: 28,
+    id:Math. random() 
+    },
+    {name:"Намджун",
+    lastName: "Ким",
+    age: 28,
+    id:Math. random() 
+    },
+    {name:"Сокджин",
+    lastName: "Ким",
+    age: 31,
+    id:Math. random() 
+    },
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Header/>
+    |<Sections users={users}/>
+     <Footer/>  
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
